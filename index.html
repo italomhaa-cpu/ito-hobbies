@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="iTo Hobbies — marketplace brasileiro de colecionáveis novos e usados.">
+<meta name="theme-color" content="#6d35d9">
+<title>iTo Hobbies — Marketplace de Colecionáveis</title>
+<link rel="icon" href="ito-hobbies-logo.png">
+<style>
+:root{--bg:#f5f5f8;--card:#fff;--ink:#15151c;--muted:#747481;--line:#e6e6ed;--purple:#6d35d9;--purple2:#8a5cf0;--dark:#15131b;--green:#15966b;--yellow:#e6a514;--shadow:0 8px 30px rgba(23,20,38,.07)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial;color:var(--ink);background:var(--bg)}
+button,input,select,textarea{font:inherit}button{cursor:pointer}.topbar{background:#111016;color:#dcd9e5;text-align:center;padding:9px 16px;font-size:12px}.topbar b{color:#fff}
+.nav{height:76px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:12px;padding:0 max(18px,calc((100% - 1240px)/2));position:sticky;top:0;z-index:30}.brand{width:154px;height:62px;display:flex;align-items:center;cursor:pointer;flex:none}.brand img{width:138px;height:62px;object-fit:contain}.navlinks{display:flex;gap:10px;align-items:center}.navlinks button{white-space:nowrap}.navlinks button{border:0;background:none;color:#3d3d48;font-weight:650;white-space:nowrap;padding:8px 4px}.navsearch{flex:0 1 330px;width:330px;min-width:220px;max-width:330px;display:flex;align-items:center;gap:2px;background:#f2f2f6;border:1px solid #e5e5eb;border-radius:12px;padding:5px;overflow:hidden}.navsearch .search-icon{flex:0 0 28px;width:28px;text-align:center;color:#666;line-height:1;font-size:17px}.navsearch input{border:0;background:transparent;outline:0;flex:1 1 auto;min-width:0;width:0;padding:9px 6px;overflow:hidden;text-overflow:ellipsis}.navsearch button{border:0;border-radius:9px;background:var(--purple);color:#fff;padding:8px 13px;font-weight:750;flex:0 0 auto;white-space:nowrap}.navright{display:flex;gap:8px;align-items:center;margin-left:auto;flex:0 0 auto;min-width:max-content}.btn{border:0;border-radius:11px;padding:11px 15px;font-weight:750}.primary{background:var(--purple);color:#fff}.dark{background:var(--dark);color:#fff}.outline{background:#fff;border:1px solid #d9d9e3;color:#33333e}.iconbtn{border:1px solid #dedee6;background:#fff;border-radius:10px;padding:10px 11px}.container{max-width:1240px;margin:auto;padding:28px 20px}.page{display:none}.page.active{display:block}
+.hero{border-radius:25px;background:radial-gradient(circle at 78% 30%,#7e49ef 0,#3c1d82 30%,#191321 72%);color:#fff;overflow:hidden;position:relative;min-height:385px;display:grid;grid-template-columns:1.2fr .8fr}.hero:after{content:"";position:absolute;inset:auto -100px -150px auto;width:500px;height:500px;border:2px solid #9b6cff33;border-radius:50%}.hero-copy{padding:50px 48px;position:relative;z-index:2}.eyebrow{display:inline-flex;gap:7px;align-items:center;background:#ffffff12;border:1px solid #ffffff20;padding:7px 10px;border-radius:999px;font-size:12px;font-weight:800}.hero h1{font-size:46px;line-height:1.02;margin:16px 0 14px;letter-spacing:-1.8px}.hero p{max-width:640px;color:#d8d2e5;font-size:17px;line-height:1.6;margin:0}.hero-actions{display:flex;gap:10px;margin-top:24px}.hero-actions .outline{background:#ffffff10;color:#fff;border-color:#ffffff30}.hero-art{position:relative;display:flex;align-items:flex-end;justify-content:center;min-height:385px}.avatar-large{height:355px;max-width:100%;object-fit:contain;filter:drop-shadow(0 18px 25px #0009)}.cs-badge{position:absolute;right:35px;top:35px;background:#09080d;border:1px solid #8a5cf0;border-radius:12px;padding:10px 13px;font-size:11px;font-weight:900;letter-spacing:1px;color:#fff}.sectionhead{display:flex;align-items:end;justify-content:space-between;margin:38px 0 16px}.sectionhead h2{margin:0;font-size:25px}.muted{color:var(--muted)}.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px}.trustbox{background:#fff;border:1px solid var(--line);border-radius:15px;padding:18px;box-shadow:var(--shadow)}.trustbox strong{display:block;margin:8px 0 4px}.trustbox span{font-size:13px;color:var(--muted);line-height:1.45}.cats{display:grid;grid-template-columns:repeat(7,1fr);gap:12px}.cat{background:#fff;border:1px solid var(--line);border-radius:15px;padding:18px 12px;text-align:center;font-weight:800;cursor:pointer;box-shadow:var(--shadow)}.cat 
+.caticon{height:82px;margin-bottom:8px;display:flex;align-items:center;justify-content:center}.cat .caticon img{width:100%;height:92px;object-fit:contain;display:block}.cat .caticon{height:92px;overflow:hidden}.product-photo img{width:100%;height:100%;object-fit:contain;padding:8px;display:block}.product-photo .product-fallback-img{padding:28px}.detail-main-img{width:100%;height:100%;object-fit:contain;border-radius:15px;padding:12px}.thumb-img{width:100%;height:100%;object-fit:contain;padding:5px;display:block}.img-fallback{font-size:70px}.brand img{height:46px;width:auto;max-width:150px;object-fit:contain;display:block}.mini-avatar{width:25px!important;height:25px!important;border-radius:50%;object-fit:cover}
+.cat small{display:block;color:var(--muted);font-weight:600;margin-top:4px}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.product{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);position:relative;cursor:pointer;transition:.15s}.product:hover{transform:translateY(-2px);box-shadow:0 13px 35px rgba(23,20,38,.12)}.product-photo{height:225px;background:linear-gradient(135deg,#eeeafa,#ddd8f2);display:flex;align-items:center;justify-content:center;font-size:82px;position:relative}.product-photo .fav{position:absolute;right:10px;top:10px;border:0;border-radius:50%;width:37px;height:37px;background:#fff;box-shadow:0 3px 12px #0002;font-size:19px}.badge{position:absolute;left:10px;top:10px;background:#17131f;color:#fff;padding:6px 9px;border-radius:8px;font-size:10px;font-weight:850}.badge.green{background:#e5f7f0;color:#087452}.product-body{padding:14px}.product-title{font-weight:800;line-height:1.3;min-height:42px}.price{font-size:20px;font-weight:900;margin:8px 0 3px}.subprice{font-size:12px;color:var(--muted)}.sellerline{display:flex;align-items:center;gap:7px;margin-top:12px;font-size:12px;color:#4d4d58}.mini-avatar{width:25px;height:25px;border-radius:50%;object-fit:cover}.verified{color:#15966b;font-weight:900}.filters{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr 1fr;gap:9px;background:#fff;border:1px solid var(--line);padding:12px;border-radius:15px;margin:16px 0 22px}.filters input,.filters select,.field input,.field select,.field textarea{width:100%;border:1px solid #dcdce5;border-radius:10px;background:#fff;padding:11px;outline:0}.cataloghead{display:flex;justify-content:space-between;align-items:center}.cataloghead h1{margin:0}.detail{display:grid;grid-template-columns:1.05fr .95fr;gap:32px}.gallery{background:#fff;border:1px solid var(--line);border-radius:20px;padding:15px}.mainphoto{height:510px;border-radius:15px;background:linear-gradient(135deg,#eeeafa,#d8d2ef);display:flex;align-items:center;justify-content:center;font-size:170px}.thumbs{display:grid;grid-template-columns:repeat(7,1fr);gap:7px;margin-top:8px}.thumb{height:65px;background:#eeeafa;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:24px;border:2px solid transparent}.thumb.active{border-color:var(--purple)}.detail h1{font-size:34px;line-height:1.12;margin:8px 0}.bigprice{font-size:34px;font-weight:950;margin:18px 0 4px}.infochips{display:flex;flex-wrap:wrap;gap:7px;margin:13px 0}.chip{padding:7px 10px;border-radius:999px;background:#f0ecff;color:#5c2ec8;font-size:12px;font-weight:800}.seller-card,.safe-card,.form{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;margin-top:16px}.seller{display:flex;align-items:center;gap:12px}.seller img{width:50px;height:50px;border-radius:50%;object-fit:cover}.seller strong{display:block}.seller small{color:var(--muted)}.safe-card{background:#f4efff;border-color:#dfd3ff}.safe-card strong{color:#4f22b7}.actions{display:flex;gap:9px;margin-top:18px}.actions button{flex:1}.form{max-width:760px;margin:0 auto}.form h1{margin-top:0}.field{margin:15px 0}.field label{display:block;font-weight:800;margin-bottom:7px;font-size:13px}.field textarea{min-height:120px;resize:vertical}.upload{border:2px dashed #cfc7e8;border-radius:14px;padding:22px;text-align:center;background:#faf9ff}.profile{display:grid;grid-template-columns:300px 1fr;gap:20px}.profile-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;text-align:center}.profile-card img{width:120px;height:120px;border-radius:50%;object-fit:cover;border:4px solid #eee7ff}.profile-main{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:20px 0}.stat{background:#f7f6fa;border-radius:12px;padding:14px;text-align:center}.stat b{display:block;font-size:21px}.empty{background:#fff;border:1px dashed #ccc;border-radius:15px;padding:45px;text-align:center}.footer{margin-top:55px;background:#15131b;color:#b9b6c1;padding:38px 20px}.footer-inner{max-width:1240px;margin:auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:28px}.footer h3{color:#fff;margin-top:0}.footer a{display:block;color:#b9b6c1;text-decoration:none;margin:8px 0;font-size:13px}.toast{position:fixed;bottom:22px;right:22px;background:#17131f;color:#fff;padding:13px 16px;border-radius:11px;box-shadow:0 10px 30px #0003;z-index:100;display:none}.mobile-menu{display:none}
+@media(max-width:1000px){.navlinks{display:none}.grid{grid-template-columns:repeat(3,1fr)}.cats{grid-template-columns:repeat(4,1fr)}.hero{grid-template-columns:1fr}.hero-art{display:none}.trust{grid-template-columns:repeat(2,1fr)}.filters{grid-template-columns:repeat(2,1fr)}.detail,.profile{grid-template-columns:1fr}.footer-inner{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:650px){.nav{height:68px;padding:0 12px;gap:9px}.brand,.brand img{width:120px;height:54px}.navsearch{display:none}.navright .outline{display:none}.container{padding:20px 13px}.hero-copy{padding:32px 25px}.hero h1{font-size:36px}.grid{grid-template-columns:repeat(2,1fr);gap:10px}.product-photo{height:175px;font-size:60px}.cats{grid-template-columns:repeat(3,1fr)}.trust{grid-template-columns:1fr}.filters{grid-template-columns:1fr}.mainphoto{height:360px}.thumbs{grid-template-columns:repeat(7,1fr)}.thumb{height:48px;font-size:18px}.footer-inner{grid-template-columns:1fr}.actions{flex-direction:column}}
+
+.socialbar{display:flex;gap:8px;align-items:center;flex:none}.socialbtn{display:inline-flex;align-items:center;justify-content:center;gap:7px;border:1px solid #17131f;background:#17131f;color:#fff;text-decoration:none;border-radius:10px;padding:9px 11px;font-size:12px;font-weight:800;white-space:nowrap;min-width:84px;flex:none}.socialbtn.ig,.socialbtn.wa{background:#17131f;color:#fff;border-color:#17131f;box-shadow:none}.brandwall{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#e8e7ed;border-radius:16px;overflow:hidden;border:1px solid #e8e7ed}.brandwall button{border:0;background:#fff;padding:18px;text-align:left;font-size:15px;font-weight:750;color:#272731;cursor:pointer}.brandwall button:hover{background:#f5f1ff;color:#5b2ac5}.highlighttabs{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}.highlighttabs button{border:1px solid #dedde7;background:#fff;border-radius:999px;padding:9px 13px;font-weight:750;color:#454550}.highlighttabs button.active,.highlighttabs button:hover{background:#17131f;color:#fff;border-color:#17131f}.about{display:grid;grid-template-columns:360px 1fr;gap:25px;align-items:stretch}.about-card{background:radial-gradient(circle at 50% 20%,#4d258f 0,#17131f 62%);color:#fff;border-radius:18px;padding:0;position:relative;overflow:hidden;min-height:560px;display:flex;align-items:stretch;justify-content:center}.about-card:after{content:"";position:absolute;inset:auto -80px -100px;width:360px;height:360px;border:1px solid #8a5cf044;border-radius:50%}.about-card img{width:100%;height:100%;min-height:560px;object-fit:cover;object-position:center top;position:relative;z-index:2}.about-copy{background:#fff;border:1px solid var(--line);border-radius:18px;padding:28px}.about-copy p{line-height:1.75;color:#575762}.realphoto{width:100%;height:225px;object-fit:contain;background:#f4f4f6}.source-note{font-size:10px;color:#8b8b95;margin-top:8px}.floating-social{position:fixed;right:18px;bottom:18px;z-index:80;display:flex;flex-direction:column;gap:8px}.floatbtn{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;font-weight:900;font-size:21px;box-shadow:0 7px 22px #0003}.float-wa{background:#20b86b}.float-ig{background:#17131f;border:2px solid #8a5cf0}.product-photo img{width:100%;height:100%;object-fit:contain;background:#f7f7f8}.reference{border:1px solid #ddd6ef;background:#fbfaff;color:#5a36a7;font-size:10px;padding:5px 8px;border-radius:7px;font-weight:800;display:inline-block;margin-top:7px}
+@media(max-width:1000px){.brandwall{grid-template-columns:repeat(3,1fr)}.about{grid-template-columns:1fr}.about-card{min-height:430px}.about-card img{min-height:430px}}
+@media(max-width:650px){.brandwall{grid-template-columns:repeat(2,1fr)}.socialbar{display:none}.floating-social{right:12px;bottom:12px}.realphoto{height:190px}}
+.img-fallback{font-size:82px;display:flex;align-items:center;justify-content:center;width:100%;height:100%}
+
+/* iTo Hobbies — suporte */
+.support-launcher{position:fixed;right:22px;bottom:28px;z-index:95;border:0;border-radius:999px;background:#17131f;color:#fff;padding:12px 18px;font-size:13px;font-weight:900;box-shadow:0 10px 28px #0003;cursor:pointer;display:flex;align-items:center;gap:8px}
+.support-launcher:hover{background:#5b2ac5;transform:translateY(-1px)}
+.support-launcher .support-dot{width:8px;height:8px;border-radius:50%;background:#8a5cf0;box-shadow:0 0 0 4px #8a5cf033}
+.support-panel{position:fixed;right:22px;bottom:228px;width:360px;max-width:calc(100vw - 28px);height:510px;background:#fff;border:1px solid #e4e2e8;border-radius:16px;box-shadow:0 18px 55px #0002;z-index:96;display:none;overflow:hidden}
+.support-panel.open{display:flex;flex-direction:column}
+.support-head{height:58px;background:#17131f;color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 16px;font-weight:900}
+.support-head-title{display:flex;align-items:center;gap:9px}.support-logo-dot{width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,#7a35e5,#4b2193);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:1000}
+.support-close{border:0;background:transparent;color:#fff;font-size:20px;line-height:1;cursor:pointer;width:32px;height:32px;border-radius:8px}.support-close:hover{background:#ffffff18}
+.support-body{flex:1;overflow:auto;padding:18px;background:#fafafa}
+.support-bubble{max-width:88%;background:#f0f0f3;border-radius:15px;padding:11px 13px;color:#555762;font-size:13px;line-height:1.45;margin-bottom:10px}
+.support-option{display:block;width:100%;text-align:left;background:#fff;border:1px solid #e0dfe5;border-radius:14px;padding:12px 14px;margin:8px 0;color:#176bc2;cursor:pointer;font-size:13px;line-height:1.35}
+.support-option:hover{border-color:#8a5cf0;background:#fbf9ff}.support-option strong{display:block;color:#176bc2;margin-bottom:3px}.support-option span{display:block;color:#69707d}
+.support-foot{padding:12px;border-top:1px solid #e5e4e9;background:#fff}.support-contact{display:flex;justify-content:flex-end;margin-bottom:10px}.support-contact a{border:1px solid #17131f;border-radius:999px;padding:9px 14px;color:#17131f;text-decoration:none;font-weight:800;font-size:12px}
+.support-input{display:flex;gap:8px}.support-input input{flex:1;border:1px solid #d9d7df;border-radius:10px;padding:11px 12px;font:inherit;font-size:12px;outline:none}.support-input input:focus{border-color:#7a35e5}.support-input button{border:0;border-radius:10px;background:#6b32d8;color:#fff;padding:0 13px;font-weight:900;cursor:pointer}
+@media(max-width:650px){.support-launcher{right:12px;bottom:24px}.support-panel{right:12px;bottom:74px;width:calc(100vw - 24px);height:500px}}
+
+
+.location-menu{position:fixed;top:86px;right:max(18px,calc((100% - 1240px)/2));width:430px;max-width:calc(100vw - 24px);background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 18px 55px #0002;z-index:90;display:none;padding:14px}.location-menu.open{display:block}.location-head{display:flex;justify-content:space-between;align-items:center;padding:4px 2px 12px}.location-head button{border:0;background:#f1f0f5;border-radius:8px;width:30px;height:30px;font-size:20px}.location-option{width:100%;display:flex;gap:10px;align-items:center;text-align:left;border:1px solid #ddd8ef;background:#faf8ff;border-radius:12px;padding:11px;margin-bottom:10px}.location-option span{font-size:22px}.location-option strong,.location-option small{display:block}.location-option small{color:var(--muted);margin-top:2px}.location-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;max-height:330px;overflow:auto}.location-grid button{border:1px solid #e4e3ea;background:#fff;border-radius:9px;padding:9px;text-align:left;font-weight:650}.location-grid button:hover{background:#f5f1ff;border-color:#cfc0f4;color:#5b2ac5}.notif-badge{font-size:10px;margin-left:2px}.header-extra{white-space:nowrap}
+@media(max-width:1000px){.header-extra{display:inline-flex}.navright .header-extra{padding:9px 10px}.location-menu{top:78px}}
+@media(max-width:650px){.navright{gap:5px}.header-extra.btn{font-size:0;padding:10px}.header-extra.btn:before{content:'📦';font-size:17px}.navright .header-extra.iconbtn{padding:9px 8px}.navright .btn.primary{padding:10px 11px}.location-menu{left:12px;right:12px;top:76px;width:auto}.location-grid{grid-template-columns:repeat(2,1fr);max-height:300px}}
+</style>
+</head>
+<body>
+<div class="topbar">🛡️ <b>iTo Hobbies</b> — marketplace especializado em colecionáveis novos e usados • segurança em evolução</div>
+
+<nav class="nav">
+  <div class="brand" onclick="go('home')"><img src="ito-hobbies-logo.png" alt="iTo Hobbies"></div>
+  <div class="navlinks">
+    <button onclick="go('catalog')">Comprar</button>
+    <button onclick="go('sell')">Vender</button>
+    <button onclick="go('catalog','Action Figures')">Action Figures</button>
+    <button onclick="go('catalog','Estátuas')">Estátuas</button>
+    <button onclick="openLocation()">Localização</button>
+    <button onclick="go('about')">Quem sou eu?</button>
+  </div>
+  <div class="navsearch"><span class="search-icon" aria-hidden="true">⌕</span><input id="globalSearch" placeholder="Buscar Hot Toys, Iron Studios, Marvel..." onkeydown="if(event.key==='Enter')globalSearch()"><button onclick="globalSearch()">Buscar</button></div>
+  <div class="navright">
+    <button class="btn outline header-extra" onclick="go('profile')">Meus Anúncios</button>
+    <button class="iconbtn header-extra" onclick="showNotifications()" title="Notificações">🔔<span id="notifCount" class="notif-badge">0</span></button>
+    <button class="iconbtn" onclick="go('favorites')" title="Favoritos">♡ <span id="favCount">0</span></button>
+    <button class="btn outline" onclick="go('login')">Entrar</button>
+    <button class="btn primary" onclick="go('sell')">+ Vender</button>
+  </div>
+</nav>
+
+<div id="locationMenu" class="location-menu" aria-label="Escolha sua localização">
+  <div class="location-head"><strong>📍 Onde você quer procurar?</strong><button onclick="closeLocation()" aria-label="Fechar">×</button></div>
+  <button class="location-option all" onclick="setLocation('')"><span>🇧🇷</span><div><strong>Todo o Brasil</strong><small>Mostrar anúncios de todos os estados</small></div></button>
+  <div class="location-grid">
+    <button onclick="setLocation('AC')">Acre</button><button onclick="setLocation('AL')">Alagoas</button><button onclick="setLocation('AP')">Amapá</button><button onclick="setLocation('AM')">Amazonas</button>
+    <button onclick="setLocation('BA')">Bahia</button><button onclick="setLocation('CE')">Ceará</button><button onclick="setLocation('DF')">Distrito Federal</button><button onclick="setLocation('ES')">Espírito Santo</button>
+    <button onclick="setLocation('GO')">Goiás</button><button onclick="setLocation('MA')">Maranhão</button><button onclick="setLocation('MT')">Mato Grosso</button><button onclick="setLocation('MS')">Mato Grosso do Sul</button>
+    <button onclick="setLocation('MG')">Minas Gerais</button><button onclick="setLocation('PA')">Pará</button><button onclick="setLocation('PB')">Paraíba</button><button onclick="setLocation('PR')">Paraná</button>
+    <button onclick="setLocation('PE')">Pernambuco</button><button onclick="setLocation('PI')">Piauí</button><button onclick="setLocation('RJ')">Rio de Janeiro</button><button onclick="setLocation('RN')">Rio Grande do Norte</button>
+    <button onclick="setLocation('RS')">Rio Grande do Sul</button><button onclick="setLocation('RO')">Rondônia</button><button onclick="setLocation('RR')">Roraima</button><button onclick="setLocation('SC')">Santa Catarina</button>
+    <button onclick="setLocation('SP')">São Paulo</button><button onclick="setLocation('SE')">Sergipe</button><button onclick="setLocation('TO')">Tocantins</button>
+  </div>
+</div>
+
+<main>
+<section id="home" class="page active">
+<div class="container">
+  <div class="hero">
+    <div class="hero-copy">
+      <span class="eyebrow">🔥 FEITO PARA QUEM COLECIONA</span>
+      <h1>O lugar onde seu colecionável encontra outro colecionador.</h1>
+      <p>Compre e venda peças novas e usadas em um marketplace criado exclusivamente para colecionáveis. Menos grupo de WhatsApp. Mais organização, confiança e informação.</p>
+      <div class="hero-actions">
+        <button class="btn primary" onclick="go('catalog')">Explorar peças</button>
+        <button class="btn outline" onclick="go('sell')">Quero vender</button>
+      </div>
+    </div>
+    <div class="hero-art">
+      
+      <img class="avatar-large" src="ito-avatar.png" alt="Avatar iTo Hobbies">
+    </div>
+  </div>
+
+  <div class="trust">
+    <div class="trustbox">🔎<strong>Anúncios detalhados</strong><span>Estado, fotos, acessórios, caixa, procedência e informações da peça.</span></div>
+    <div class="trustbox">🛡️<strong>Compra mais segura</strong><span>Arquitetura pensada para reduzir golpes comuns de negociações em grupos.</span></div>
+    <div class="trustbox">⭐<strong>Reputação</strong><span>Vendedores e compradores terão histórico e avaliações na evolução do projeto.</span></div>
+    <div class="trustbox">📦<strong>Feito para colecionáveis</strong><span>Categorias, marcas, escalas e características específicas do hobby.</span></div>
+  </div>
+
+  <div class="sectionhead"><div><h2>Explore por categoria</h2><div class="muted">Encontre exatamente o que você procura.</div></div><button class="btn outline" onclick="go('catalog')">Ver catálogo</button></div>
+  <div class="cats">
+    <div class="cat" onclick="go('catalog','Action Figures')"><div class="caticon"><img src="https://www.sideshow.com/cdn-cgi/image/height%3D850%2Cquality%3D90%2Cf%3Dauto/https%3A//www.sideshow.com/storage/product-images/908901/iron-man-mark-i_marvel_gallery_66e9e3e64a6e1.jpg" alt="Action Figures"></div>Action Figures<small>1/6 • 1/12</small></div>
+    <div class="cat" onclick="go('catalog','Estátuas')"><div class="caticon"><img src="https://ironstudios.com.br/cdn/shop/files/090774_1_ef2de504-66ee-4834-8066-398bc6442ec3.jpg?v=1758029826&width=1024" alt="Estátuas"></div>Estátuas<small>Premium • 1/10</small></div>
+    <div class="cat" onclick="go('catalog','Marvel')"><div class="caticon"><img src="https://d33wubrfki0l68.cloudfront.net/d5ef3f7bbffbf48743e70b15721f3118ded44be9/e7a30/assets/img/products/hot-toys-mms-479-avengers-infinity-war-thanos/1.jpg" alt="Marvel"></div>Marvel<small>Heróis e vilões</small></div>
+    <div class="cat" onclick="go('catalog','DC')"><div class="caticon"><img src="https://www.sideshow.com/cdn-cgi/image/height%3D850%2Cquality%3D90%2Cf%3Dauto/https%3A//www.sideshow.com/storage/product-images/300831/batman_dc-comics_gallery_66ccccc46d8f6.jpg" alt="DC"></div>DC<small>Batman • Superman</small></div>
+    <div class="cat" onclick="go('catalog','Anime')"><div class="caticon"><img src="https://nendozone.com/cdn/shop/files/CopyofCopyofUntitled_1000x1000px_1024x1024px_-2026-02-25T150907.271.png?v=1772032156&width=1445" alt="Anime"></div>Anime<small>Figuras e estátuas</small></div>
+    <div class="cat" onclick="go('catalog','Model Kits')"><div class="caticon"><img src="https://www.madinjapan.fr/40070-large_default/evangelion-real-grade-eva-01-bandai.jpg" alt="Model Kits"></div>Model Kits<small>Montagem e pintura</small></div>
+    <div class="cat" onclick="go('catalog','Réplica')"><div class="caticon"><img src="https://i.ebayimg.com/images/g/rCgAAOSwgUFoBVz-/s-l1200.jpg" alt="Réplicas"></div>Réplicas<small>Props e acessórios</small></div>
+  </div>
+
+  <div class="sectionhead"><div><h2>Marcas que vivem no iTo Hobbies</h2><div class="muted">Selecione uma marca para explorar anúncios.</div></div><button class="btn outline" onclick="go('catalog')">Ver catálogo</button></div>
+  <div class="brandwall">
+    <button onclick="brandFilter('Iron Studios')">Iron Studios</button><button onclick="brandFilter('Bandai')">Bandai</button><button onclick="brandFilter('Blokees')">Blokees</button><button onclick="brandFilter('Galápagos')">Galápagos</button>
+    <button onclick="brandFilter('Goodsmile')">Goodsmile</button><button onclick="brandFilter('Hasbro')">Hasbro</button><button onclick="brandFilter('Hot Toys')">Hot Toys</button><button onclick="brandFilter('Kotobukiya')">Kotobukiya</button>
+    <button onclick="brandFilter('McFarlane')">McFarlane</button><button onclick="brandFilter('MiniCo')">MiniCo</button><button onclick="brandFilter('NECA')">NECA</button><button onclick="brandFilter('Prime 1')">Prime 1</button>
+    <button onclick="brandFilter('Queen Studios')">Queen Studios</button><button onclick="brandFilter('Sideshow')">Sideshow</button><button onclick="brandFilter('Topps')">Topps</button><button onclick="brandFilter('Beast Kingdom')">Beast Kingdom</button>
+  </div>
+
+  <div class="sectionhead"><div><h2>Explore por destaque</h2><div class="muted">Uma navegação inspirada na lógica dos grandes catálogos de colecionáveis.</div></div></div>
+  <div class="highlighttabs"><button class="active" onclick="highlight('all',this)">Todos</button><button onclick="highlight('new',this)">Lançamentos</button><button onclick="highlight('hot',this)">Mais procurados</button><button onclick="highlight('last',this)">Últimas unidades</button><button onclick="highlight('Marvel',this)">Marvel</button><button onclick="highlight('DC',this)">DC</button><button onclick="highlight('Anime',this)">Anime</button><button onclick="highlight('Model Kits',this)">Model Kits</button></div>
+  <div id="highlightGrid" class="grid"></div>
+
+  <div class="sectionhead"><div><h2>Destaques da comunidade</h2><div class="muted">Exemplos de anúncios para o lançamento.</div></div><button class="btn outline" onclick="go('catalog')">Ver todos</button></div>
+  <div id="homeGrid" class="grid"></div>
+
+  <div class="sectionhead"><div><h2>Como o iTo Hobbies funciona</h2><div class="muted">A ideia é trazer para o hobby a organização de um marketplace.</div></div></div>
+  <div class="trust">
+    <div class="trustbox"><b>1.</b><strong>Crie seu anúncio</strong><span>Até 7 fotos, preço, condição, descrição e detalhes da peça.</span></div>
+    <div class="trustbox"><b>2.</b><strong>Converse</strong><span>O interessado fala diretamente com o vendedor pelo anúncio.</span></div>
+    <div class="trustbox"><b>3.</b><strong>Negocie</strong><span>Combine os detalhes com transparência e registre tudo no ambiente.</span></div>
+    <div class="trustbox"><b>4.</b><strong>Compre com mais confiança</strong><span>Os mecanismos de pagamento e proteção serão conectados na próxima etapa.</span></div>
+  </div>
+</div>
+</section>
+
+<section id="about" class="page"><div class="container">
+  <div class="about">
+    <div class="about-card"><img src="ito-avatar.png" alt="Avatar"></div>
+    <div class="about-copy"><span class="chip">QUEM SOU EU?</span><h1 style="font-size:38px;margin-bottom:10px">Colecionador falando com colecionadores.</h1>
+      <p>O iTo Hobbies nasceu de uma ideia simples: quem coleciona não quer apenas comprar uma peça — quer saber de onde ela veio, qual é o estado, se a caixa está completa, se existe procedência e, principalmente, se pode confiar em quem está do outro lado.</p>
+      <p>Hoje muita negociação acontece em grupos e conversas espalhadas. A proposta do iTo Hobbies é organizar esse universo em um marketplace dedicado exclusivamente ao hobby, reunindo peças novas e usadas, anúncios detalhados, reputação e ferramentas de segurança.</p>
+      <p>Trabalhamos e acompanhamos marcas como <strong>Iron Studios, Bandai, MiniCo, Sideshow, Hot Toys, Beast Kingdom</strong> e muitas outras — além de linhas, escalas e franquias que fazem parte da rotina de quem realmente coleciona.</p>
+      <p><strong>O feito é melhor que o perfeito.</strong> Vamos colocar o iTo Hobbies no ar, ouvir os colecionadores e evoluir junto com a comunidade.</p>
+      <div class="hero-actions"><a class="btn primary" href="https://www.instagram.com/itofps" target="_blank" rel="noopener">◎ Conheça meu Instagram</a><a class="btn outline" href="https://wa.me/5521970478612" target="_blank" rel="noopener">◉ Falar no WhatsApp</a></div>
+    </div>
+  </div>
+  <div class="sectionhead"><div><h2>O que queremos construir</h2><div class="muted">Um lugar especializado onde o colecionador se sinta em casa.</div></div></div>
+  <div class="trust"><div class="trustbox">🔐<strong>Mais confiança</strong><span>Histórico, reputação e informações claras sobre vendedor e peça.</span></div><div class="trustbox">📸<strong>Fotos reais</strong><span>Até 7 fotos no anúncio para mostrar estado, caixa e detalhes.</span></div><div class="trustbox">🧾<strong>Informação de verdade</strong><span>Marca, escala, linha, franquia, condição e procedência organizadas.</span></div><div class="trustbox">🤝<strong>Comunidade</strong><span>Um marketplace feito para aproximar quem compra de quem vende.</span></div></div>
+</div></section>
+
+<section id="catalog" class="page"><div class="container">
+  <div class="cataloghead"><div><h1>Marketplace</h1><div class="muted"><span id="resultCount">0</span> anúncios demonstrativos</div></div><select id="sort" onchange="renderCatalog()" style="padding:10px;border:1px solid #ddd;border-radius:10px"><option value="relevant">Mais relevantes</option><option value="low">Menor preço</option><option value="high">Maior preço</option><option value="new">Mais recentes</option></select></div>
+  <div class="filters">
+    <input id="catSearch" placeholder="Buscar peça, personagem, marca..." oninput="renderCatalog()">
+    <select id="catSelect" onchange="renderCatalog()"><option value="">Categoria</option><option>Action Figures</option><option>Estátuas</option><option>Marvel</option><option>DC</option><option>Anime</option><option>Model Kits</option><option>Réplica</option></select>
+    <select id="conditionSelect" onchange="renderCatalog()"><option value="">Condição</option><option>Novo</option><option>Usado</option><option>Lacrado</option><option>Aberto / completo</option></select>
+    <select id="brandSelect" onchange="renderCatalog()"><option value="">Marca</option><option>Iron Studios</option><option>Bandai</option><option>Blokees</option><option>Galápagos</option><option>Goodsmile</option><option>Hasbro</option><option>Hot Toys</option><option>Kotobukiya</option><option>McFarlane</option><option>MiniCo</option><option>NECA</option><option>Prime 1</option><option>Queen Studios</option><option>Sideshow</option><option>Topps</option><option>Beast Kingdom</option><option>Outra</option></select>
+    <select id="priceSelect" onchange="renderCatalog()"><option value="">Faixa de preço</option><option value="500">Até R$ 500</option><option value="1500">Até R$ 1.500</option><option value="3000">Até R$ 3.000</option><option value="999999">Acima</option></select>
+    <select id="stateSelect" onchange="setLocation(this.value)"><option value="">🇧🇷 Todo o Brasil</option><option value="AC">Acre</option><option value="AL">Alagoas</option><option value="AP">Amapá</option><option value="AM">Amazonas</option><option value="BA">Bahia</option><option value="CE">Ceará</option><option value="DF">Distrito Federal</option><option value="ES">Espírito Santo</option><option value="GO">Goiás</option><option value="MA">Maranhão</option><option value="MT">Mato Grosso</option><option value="MS">Mato Grosso do Sul</option><option value="MG">Minas Gerais</option><option value="PA">Pará</option><option value="PB">Paraíba</option><option value="PR">Paraná</option><option value="PE">Pernambuco</option><option value="PI">Piauí</option><option value="RJ">Rio de Janeiro</option><option value="RN">Rio Grande do Norte</option><option value="RS">Rio Grande do Sul</option><option value="RO">Rondônia</option><option value="RR">Roraima</option><option value="SC">Santa Catarina</option><option value="SP">São Paulo</option><option value="SE">Sergipe</option><option value="TO">Tocantins</option></select>
+  </div>
+  <div id="catalogGrid" class="grid"></div>
+</div></section>
+
+<section id="detail" class="page"><div class="container"><div class="muted" style="cursor:pointer;font-weight:750;margin-bottom:15px" onclick="go('catalog')">← Voltar para o marketplace</div><div id="detailContent"></div></div></section>
+
+<section id="sell" class="page"><div class="container"><div class="form">
+  <h1>Vender no iTo Hobbies</h1><p class="muted">Publique sua peça e encontre compradores que entendem de colecionáveis.</p>
+  <div class="field"><label>Título do anúncio</label><input id="sellTitle" placeholder="Ex.: Hot Toys Iron Man Mark 85 MMS528"></div>
+  <div class="field"><label>Categoria</label><select id="sellCat"><option>Action Figures</option><option>Estátuas</option><option>Marvel</option><option>DC</option><option>Anime</option><option>Model Kits</option><option>Réplica</option></select></div>
+  <div class="field"><label>Marca</label><select id="sellBrand"><option>Iron Studios</option><option>Bandai</option><option>Blokees</option><option>Galápagos</option><option>Goodsmile</option><option>Hasbro</option><option>Hot Toys</option><option>Kotobukiya</option><option>McFarlane</option><option>MiniCo</option><option>NECA</option><option>Prime 1</option><option>Queen Studios</option><option>Sideshow</option><option>Topps</option><option>Beast Kingdom</option><option>Outra</option></select></div>
+  <div class="field"><label>Condição</label><select id="sellCondition"><option>Novo</option><option>Lacrado</option><option>Usado</option><option>Aberto / completo</option></select></div>
+  <div class="field"><label>Localização da peça</label><select id="sellState"><option value="RJ">Rio de Janeiro</option><option value="SP">São Paulo</option><option value="MG">Minas Gerais</option><option value="ES">Espírito Santo</option><option value="BA">Bahia</option><option value="PR">Paraná</option><option value="SC">Santa Catarina</option><option value="RS">Rio Grande do Sul</option><option value="DF">Distrito Federal</option><option value="PE">Pernambuco</option><option value="CE">Ceará</option><option value="GO">Goiás</option><option value="PA">Pará</option><option value="AM">Amazonas</option><option value="MA">Maranhão</option><option value="PB">Paraíba</option><option value="RN">Rio Grande do Norte</option><option value="AL">Alagoas</option><option value="PI">Piauí</option><option value="MT">Mato Grosso</option><option value="MS">Mato Grosso do Sul</option><option value="SE">Sergipe</option><option value="RO">Rondônia</option><option value="TO">Tocantins</option><option value="AC">Acre</option><option value="AP">Amapá</option><option value="RO">Rondônia</option><option value="RR">Roraima</option></select></div>
+  <div class="field"><label>Preço</label><input id="sellPrice" type="number" placeholder="Ex.: 2699"></div>
+  <div class="field"><label>Descrição</label><textarea id="sellDesc" placeholder="Informe estado, caixa, acessórios, detalhes, procedência e qualquer avaria."></textarea></div>
+  <div class="field"><label>Fotos — máximo de 7</label><div class="upload">📸<br><strong>Selecione até 7 fotos</strong><br><small class="muted">No MVP elas ficam apenas no formulário. O upload real entra com o backend.</small><br><input type="file" multiple accept="image/*" onchange="checkPhotos(this)" style="margin-top:10px"></div></div>
+  <button class="btn primary" onclick="publish()">Publicar anúncio</button>
+</div></div></section>
+
+<section id="favorites" class="page"><div class="container"><h1>Meus favoritos</h1><div class="muted" style="margin-bottom:20px">Peças que você marcou para acompanhar.</div><div id="favGrid" class="grid"></div></div></section>
+
+<section id="messages" class="page"><div class="container"><div class="form"><h1>Mensagens</h1><div class="box" style="padding:15px;border:1px solid #eee;border-radius:12px;margin:10px 0"><b>Chat demonstrativo</b><p class="muted">Aqui ficará a conversa entre comprador e vendedor. A infraestrutura de mensagens será conectada ao backend.</p><button class="btn primary" onclick="alert('Chat demonstrativo aberto.')">Abrir conversa</button></div></div></div></section>
+
+<section id="profile" class="page"><div class="container"><div class="profile">
+  <div class="profile-card"><img src="ito-avatar.png" alt="Avatar"><h2>iTo Hobbies</h2><div class="verified">✓ Perfil verificado</div><p class="muted">Colecionador e comunidade</p><button class="btn primary" onclick="go('sell')">+ Novo anúncio</button></div>
+  <div class="profile-main"><h1>Meu perfil</h1><p class="muted">Área do usuário — pronta para receber dados reais.</p><div class="stats"><div class="stat"><b id="myAds">0</b>anúncios</div><div class="stat"><b id="myFavs">0</b>favoritos</div><div class="stat"><b>0</b>avaliações</div></div><button class="btn outline" onclick="go('messages')">💬 Mensagens</button></div>
+</div></div></section>
+
+<section id="login" class="page"><div class="container"><div class="form"><h1>Entrar no iTo Hobbies</h1><p class="muted">No MVP, o acesso é demonstrativo. O login real será conectado ao backend.</p><div class="field"><label>E-mail</label><input placeholder="seu@email.com"></div><div class="field"><label>Senha</label><input type="password" placeholder="••••••••"></div><button class="btn primary" onclick="demoLogin()">Entrar</button> <button class="btn outline" onclick="alert('Cadastro será conectado ao backend na próxima etapa.')">Criar conta</button></div></div></section>
+</main>
+
+
+<!-- Central de Apoio iTo Hobbies -->
+<button class="support-launcher" id="supportLauncher" onclick="toggleSupport()" aria-label="Abrir apoio">
+  <span class="support-dot"></span> Apoio
+</button>
+<div class="support-panel" id="supportPanel" role="dialog" aria-label="Apoio iTo Hobbies">
+  <div class="support-head">
+    <div class="support-head-title"><span class="support-logo-dot">iTo</span><span>iTo Hobbies</span></div>
+    <button class="support-close" onclick="toggleSupport(false)" aria-label="Fechar apoio">−</button>
+  </div>
+  <div class="support-body">
+    <div class="support-bubble">Olá, colecionador! 👋<br>Como podemos ajudar você?</div>
+    <button class="support-option" onclick="supportReply('Quero saber como comprar uma peça.')"><strong>🛒 Como comprar?</strong><span>Veja como encontrar e negociar uma peça.</span></button>
+    <button class="support-option" onclick="supportReply('Quero anunciar uma peça.')"><strong>📦 Quero vender uma peça</strong><span>Saiba como criar seu anúncio no iTo Hobbies.</span></button>
+    <button class="support-option" onclick="supportReply('Tenho uma dúvida sobre segurança.')"><strong>🛡️ Segurança e confiança</strong><span>Entenda a proposta de segurança do marketplace.</span></button>
+    <button class="support-option" onclick="supportReply('Quero falar com o iTo Hobbies.')"><strong>💬 Falar com o iTo Hobbies</strong><span>Envie sua dúvida diretamente para nossa equipe.</span></button>
+  </div>
+  <div class="support-foot">
+    <div class="support-contact"><a href="https://wa.me/5521970478612" target="_blank" rel="noopener">Entre em contato</a></div>
+    <div class="support-input"><input id="supportInput" placeholder="Digite a sua pergunta aqui..." onkeydown="if(event.key==='Enter')sendSupport()"><button onclick="sendSupport()">Enviar</button></div>
+  </div>
+</div>
+
+<footer class="footer"><div class="footer-inner">
+<div><h3>iTo Hobbies</h3><p>Marketplace brasileiro especializado em colecionáveis novos e usados.</p><small>Protótipo funcional • dados de demonstração.</small></div>
+<div><h3>Comprar</h3><a href="#" onclick="go('catalog');return false">Marketplace</a><a href="#" onclick="go('catalog','Action Figures');return false">Action Figures</a><a href="#" onclick="go('catalog','Estátuas');return false">Estátuas</a></div>
+<div><h3>Vender</h3><a href="#" onclick="go('sell');return false">Anunciar peça</a><a href="#" onclick="go('profile');return false">Meu perfil</a><a href="#" onclick="go('messages');return false">Mensagens</a></div>
+<div><h3>iTo Hobbies</h3><a href="#" onclick="go('about');return false">Quem sou eu?</a><a href="https://www.instagram.com/itofps" target="_blank" rel="noopener">Instagram</a><a href="https://wa.me/5521970478612" target="_blank" rel="noopener">WhatsApp</a><a href="#">Segurança</a><a href="#">Termos</a><a href="#">Privacidade</a><a href="#">Contato</a></div>
+</div></footer>
+<div id="toast" class="toast"></div>
+
+<script>
+const products=[
+{id:1,title:"Shuri — Pantera Negra Wakanda Para Sempre",cat:"Marvel",brand:"MiniCo",condition:"Novo",price:199.99,img:"https://ironstudios.com.br/cdn/shop/files/090774_1_ef2de504-66ee-4834-8066-398bc6442ec3.jpg?v=1758029826&width=1024",emoji:"👸",seller:"Collector RJ",rating:"5,0",loc:"Rio de Janeiro, RJ",verified:true,age:10,desc:"Peça de coleção em excelente condição. Exemplo demonstrativo de anúncio detalhado."},
+{id:2,title:"Batman Premium Format — Exclusive",cat:"Estátuas",brand:"Sideshow",condition:"Usado",price:4200,img:"https://www.sideshow.com/cdn-cgi/image/height%3D850%2Cquality%3D90%2Cf%3Dauto/https%3A//www.sideshow.com/storage/product-images/300831/batman_dc-comics_gallery_66ccccc46d8f6.jpg",emoji:"🦇",seller:"Gotham Collector",rating:"4,9",loc:"São Paulo, SP",verified:true,age:9,desc:"Estátua premium. Anúncio demonstrativo."},
+{id:3,title:"Fern — Frieren: Beyond Journey’s End",cat:"Anime",brand:"Banpresto",condition:"Novo",price:269.99,img:"https://nendozone.com/cdn/shop/files/CopyofCopyofUntitled_1000x1000px_1024x1024px_-2026-02-25T150907.271.png?v=1772032156&width=1445",emoji:"🧙",seller:"Mundo Figure",rating:"5,0",loc:"Niterói, RJ",verified:true,age:8,desc:"Figura completa com acessórios."},
+{id:4,title:"Superman Black — Justice League MiniCo",cat:"DC",brand:"Iron Studios",condition:"Novo",price:179.99,img:"https://ironstudios.com.br/cdn/shop/files/090321_0.jpg?v=1748277804&width=1024",emoji:"🦸",seller:"Collector House",rating:"4,8",loc:"Belo Horizonte, MG",verified:true,age:7,desc:"Figura bem conservada."},
+{id:5,title:"Super Android 17 — Dragon Ball GT S.H.Figuarts",cat:"Anime",brand:"Bandai",condition:"Novo",price:849.99,img:"https://www.limitededition.com.br/cdn/shop/files/7283009_1024x1024.png?v=1763590374",emoji:"🐉",seller:"Anime Collection",rating:"5,0",loc:"Curitiba, PR",verified:false,age:6,desc:"Produto original e lacrado."},
+{id:6,title:"Thanos Infinity War — 1/6",cat:"Marvel",brand:"Hot Toys",condition:"Usado",price:3100,img:"https://d33wubrfki0l68.cloudfront.net/d5ef3f7bbffbf48743e70b15721f3118ded44be9/e7a30/assets/img/products/hot-toys-mms-479-avengers-infinity-war-thanos/1.jpg",emoji:"💜",seller:"Universo 1/6",rating:"4,9",loc:"Rio de Janeiro, RJ",verified:true,age:5,desc:"Peça em excelente estado."},
+{id:7,title:"Joker Premium — 1/4",cat:"Estátuas",brand:"Prime 1",condition:"Lacrado",price:6990,img:"https://www.prime1studio.com/on/demandware.static/-/Sites-p1s-master-catalog/default/dwf3909377/images/UPMDC-15DXS/catalog/b034-OFXuJiAr.jpg",emoji:"🃏",seller:"Gotham Collector",rating:"4,9",loc:"São Paulo, SP",verified:true,age:4,desc:"Estátua premium, caixa original."},
+{id:8,title:"Deadpool 1/6",cat:"Marvel",brand:"Hot Toys",condition:"Aberto / completo",price:1750,img:"https://www.sideshow.com/cdn-cgi/image/width%3D850%2Cquality%3D90%2Cf%3Dauto/https%3A//www.sideshow.com/storage/product-images/903587/deadpool_marvel_silo.png",emoji:"⚔️",seller:"Mundo Figure",rating:"5,0",loc:"Campinas, SP",verified:true,age:3,desc:"Figura completa e conservada."},
+{id:9,title:"Iron Studios Spider-Man Art Scale 1/10",cat:"Estátuas",brand:"Iron Studios",condition:"Novo",price:1290,img:"https://ironstudios.com.br/cdn/shop/files/10847148.jpg?v=1781014446&width=1024",emoji:"🕸️",seller:"Iron Collector",rating:"4,9",loc:"Rio de Janeiro, RJ",verified:true,age:2,desc:"Estátua Art Scale."},
+{id:10,title:"Batman Arkham Knight — 1/6",cat:"DC",brand:"Hot Toys",condition:"Usado",price:2300,img:"https://www.quick-toy.fr/img/p/040117_080212_kzvPMnRr_imagePrincipale.jpg",emoji:"🦇",seller:"Batcaverna",rating:"4,7",loc:"Brasília, DF",verified:false,age:1,desc:"Peça usada em bom estado."},
+{id:11,title:"Evangelion Unit-01 — Model Kit",cat:"Model Kits",brand:"Bandai",condition:"Lacrado",price:520,img:"https://www.madinjapan.fr/40070-large_default/evangelion-real-grade-eva-01-bandai.jpg",emoji:"🤖",seller:"Gundam BR",rating:"5,0",loc:"São Paulo, SP",verified:true,age:11,desc:"Model kit lacrado."},
+{id:12,title:"Capacete Mandalorian — Réplica",cat:"Réplica",brand:"Outra",condition:"Novo",price:980,img:"https://i.ebayimg.com/images/g/rCgAAOSwgUFoBVz-/s-l1200.jpg",emoji:"🪖",seller:"Galactic Props",rating:"4,8",loc:"Porto Alegre, RS",verified:true,age:12,desc:"Réplica decorativa."},
+{id:13,title:"Hulkbuster — 1/6",cat:"Marvel",brand:"Hot Toys",condition:"Usado",price:5400,img:"products/hulkbuster.svg",emoji:"💥",seller:"Avengers Collector",rating:"5,0",loc:"Rio de Janeiro, RJ",verified:true,age:13,desc:"Peça de alto padrão."},
+{id:14,title:"Iron Man Mark VII — 1/6",cat:"Action Figures",brand:"Hot Toys",condition:"Aberto / completo",price:2200,img:"https://i.ebayimg.com/images/g/cGYAAOSwBLlVUh-p/s-l1200.jpg",emoji:"🦾",seller:"Sixth Scale BR",rating:"4,9",loc:"Santos, SP",verified:true,age:14,desc:"Figura completa."},
+{id:15,title:"Spider-Man Diorama",cat:"Estátuas",brand:"Iron Studios",condition:"Novo",price:1600,img:"https://ironstudios.com.br/cdn/shop/files/10847148.jpg?v=1781014446&width=1024",emoji:"🕷️",seller:"Marvel Collection",rating:"4,9",loc:"Recife, PE",verified:true,age:15,desc:"Diorama demonstrativo."},
+{id:16,title:"Gundam RX-78 — Perfect Grade",cat:"Model Kits",brand:"Bandai",condition:"Lacrado",price:1450,img:"https://product.hstatic.net/200000326537/product/pgu-rx-78-2-1_b3986c47a87746f8a5578a9492992928.jpg",emoji:"🧩",seller:"Gundam BR",rating:"5,0",loc:"São Paulo, SP",verified:true,age:16,desc:"Kit original lacrado."}
+];
+
+let favorites=new Set(JSON.parse(localStorage.getItem("itoFavs")||"[]").map(String));
+let myAds=JSON.parse(localStorage.getItem("itoAds")||"[]");
+const money=v=>new Intl.NumberFormat("pt-BR",{style:"currency",currency:"BRL"}).format(v);
+function allProducts(){return [...myAds,...products]}
+function toast(msg){const t=document.getElementById("toast");if(!t)return;t.textContent=msg;t.style.display="block";clearTimeout(window._toast);window._toast=setTimeout(()=>t.style.display="none",2400)}
+function save(){localStorage.setItem("itoFavs",JSON.stringify([...favorites]));localStorage.setItem("itoAds",JSON.stringify(myAds))}
+function safe(v){return String(v??"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}
+function imageTag(src,alt,cls=""){return `<img class="${cls}" src="${safe(src)}" alt="${safe(alt)}" onerror="this.onerror=null;this.src='products/fallback.svg';this.alt='Imagem indisponível';">`}
+function card(p){
+const image=p.img?imageTag(p.img,p.title):`<img class="product-fallback-img" src="products/fallback.svg" alt="Imagem de demonstração">`;
+return `<article class="product" onclick="openProduct('${String(p.id)}')">
+<div class="product-photo"><span class="badge">${safe(p.condition)}</span>${p.verified?'<span class="badge green" style="left:auto;right:10px">✓ VERIFICADO</span>':''}<button class="fav" onclick="event.stopPropagation();toggleFav('${String(p.id)}')">${favorites.has(p.id)?"♥":"♡"}</button>${image}</div>
+<div class="product-body"><div class="product-title">${safe(p.title)}</div><div class="price">${money(p.price)}</div><div class="subprice">${safe(p.condition)} • ${safe(p.loc)}</div><div class="sellerline"><img class="mini-avatar" src="ito-avatar.png" alt="Vendedor"><span>${safe(p.seller)}</span>${p.verified?'<span class="verified">✓</span>':''}</div></div></article>`;
+}
+function brandFilter(brand){go("catalog");document.getElementById("catSearch").value="";document.getElementById("brandSelect").value=brand;renderCatalog()}
+function highlight(type,btn){
+ document.querySelectorAll(".highlighttabs button").forEach(b=>b.classList.remove("active"));if(btn)btn.classList.add("active");
+ let a=allProducts();
+ if(type==="new")a=a.filter(p=>p.age<=5);
+ if(type==="last")a=a.filter(p=>p.age<=8);
+ if(["Marvel","DC","Anime","Model Kits"].includes(type))a=a.filter(p=>p.cat===type);
+ if(type==="hot")a=a.slice().sort((x,y)=>Number(String(y.rating).replace(',','.'))-Number(String(x.rating).replace(',','.')));
+ document.getElementById("highlightGrid").innerHTML=a.slice(0,8).map(card).join("");
+}
+function renderHome(){document.getElementById("homeGrid").innerHTML=products.slice(0,8).map(card).join("");highlight("all",document.querySelector(".highlighttabs button"))}
+function renderCatalog(){
+ const q=(document.getElementById("catSearch").value||"").toLowerCase();
+ const cat=document.getElementById("catSelect").value,cond=document.getElementById("conditionSelect").value,brand=document.getElementById("brandSelect").value,price=document.getElementById("priceSelect").value,sort=document.getElementById("sort").value,state=document.getElementById("stateSelect").value;
+ let a=allProducts().filter(p=>(!q||(p.title+" "+p.cat+" "+p.brand+" "+p.seller).toLowerCase().includes(q))&&(!cat||p.cat===cat)&&(!cond||p.condition===cond)&&(!brand||p.brand===brand)&&(!price||(price==="999999"?p.price>3000:p.price<=Number(price)))&&(!state||String(p.loc||"").endsWith(", "+state)||String(p.loc||"")===state));
+ if(sort==="low")a.sort((x,y)=>x.price-y.price);if(sort==="high")a.sort((x,y)=>y.price-x.price);if(sort==="new")a.sort((x,y)=>y.age-x.age);
+ document.getElementById("resultCount").textContent=a.length;document.getElementById("catalogGrid").innerHTML=a.length?a.map(card).join(""):'<div class="empty">Nenhum anúncio encontrado. Tente outro filtro.</div>';
+}
+function openProduct(id){
+ const p=allProducts().find(x=>String(x.id)===String(id));if(!p)return;
+ const mainImage=p.img?imageTag(p.img,p.title,"detail-main-img"):imageTag("products/fallback.svg","Imagem indisponível","detail-main-img");
+ const thumbs=Array.from({length:7},(_,i)=>`<div class="thumb ${i===0?"active":""}" onclick="setDetailImage('${safe(p.img||'products/fallback.svg')}',this)">${imageTag(p.img||"products/fallback.svg",p.title,"thumb-img")}</div>`).join("");
+ document.getElementById("detailContent").innerHTML=`<div class="detail">
+ <div class="gallery"><div class="mainphoto" id="mainProductPhoto">${mainImage}</div><div class="thumbs">${thumbs}</div></div>
+ <div><div class="chip">${safe(p.cat)} • ${safe(p.brand)}</div><h1>${safe(p.title)}</h1><div class="bigprice">${money(p.price)}</div><div class="muted">${safe(p.condition)} • ${safe(p.loc)}</div><div class="infochips"><span class="chip">📸 até 7 fotos</span><span class="chip">⭐ ${safe(p.rating)}</span>${p.verified?'<span class="chip">✓ vendedor verificado</span>':''}</div>
+ <p style="line-height:1.6">${safe(p.desc)}</p>
+ <div class="seller-card"><div class="seller"><img src="ito-avatar.png" alt="Avatar"><div><strong>${safe(p.seller)} ${p.verified?'<span class="verified">✓</span>':''}</strong><small>⭐ ${safe(p.rating)} • ${safe(p.loc)}</small></div></div></div>
+ <div class="safe-card"><strong>🛡️ Compra mais segura</strong><p class="muted" style="margin-bottom:0">O iTo Hobbies foi pensado para centralizar anúncio, vendedor e conversa. Pagamento protegido e logística serão integrados na próxima etapa.</p></div>
+ <div class="actions"><button class="btn primary" onclick="toast('Chat demonstrativo aberto com ${safe(p.seller)}.')">💬 Falar com vendedor</button><button class="btn outline" onclick="toggleFav('${String(p.id)}');renderDetail('${String(p.id)}')">${favorites.has(p.id)?"♥ Favoritado":"♡ Favoritar"}</button></div>
+ </div></div>`;
+ go("detail");
+}
+function setDetailImage(src,el){document.getElementById("mainProductPhoto").innerHTML=imageTag(src,"Imagem do produto","detail-main-img");document.querySelectorAll(".thumb").forEach(x=>x.classList.remove("active"));el.classList.add("active")}
+function renderDetail(id){openProduct(id)}
+function openLocation(){document.getElementById("locationMenu").classList.add("open")}
+function closeLocation(){document.getElementById("locationMenu").classList.remove("open")}
+function setLocation(state){const sel=document.getElementById("stateSelect");if(sel)sel.value=state||"";closeLocation();go("catalog");renderCatalog();}
+function showNotifications(){toast("Você não tem novas notificações.")}
+function go(page,arg){
+ const target=document.getElementById(page);if(!target){console.warn("Página não encontrada:",page);return}
+ document.querySelectorAll(".page").forEach(x=>x.classList.remove("active"));target.classList.add("active");window.scrollTo({top:0,behavior:"smooth"});
+ if(page==="home")renderHome();
+ if(page==="catalog"){
+  if(arg){document.getElementById("catSearch").value="";document.getElementById("brandSelect").value="";document.getElementById("catSelect").value=["Action Figures","Estátuas","Marvel","DC","Anime","Model Kits","Réplica"].includes(arg)?arg:"";if(!["Action Figures","Estátuas","Marvel","DC","Anime","Model Kits","Réplica"].includes(arg))document.getElementById("catSearch").value=arg;}
+  renderCatalog();
+ }
+ if(page==="favorites")renderFav();
+ if(page==="profile")renderProfile();
+}
+function globalSearch(){const q=document.getElementById("globalSearch").value.trim();go("catalog");document.getElementById("catSearch").value=q;renderCatalog()}
+function toggleFav(id){const key=String(id);favorites.has(key)?favorites.delete(key):favorites.add(key);save();updateFav();toast(favorites.has(key)?"Adicionado aos favoritos":"Removido dos favoritos");if(document.getElementById("favorites").classList.contains("active"))renderFav()}
+function updateFav(){document.getElementById("favCount").textContent=favorites.size}
+function renderFav(){const a=allProducts().filter(p=>favorites.has(String(p.id)));document.getElementById("favGrid").innerHTML=a.length?a.map(card).join(""):'<div class="empty">Você ainda não favoritou nenhuma peça.</div>'}
+function checkPhotos(input){if(input.files.length>7){alert("O máximo é 7 fotos.");input.value=""}else toast(input.files.length+" foto(s) selecionada(s)")}
+function publish(){
+ const title=document.getElementById("sellTitle").value.trim(),price=Number(document.getElementById("sellPrice").value);
+ if(!title||!price){alert("Preencha título e preço.");return}
+ const p={id:"m"+Date.now(),title,cat:document.getElementById("sellCat").value,brand:document.getElementById("sellBrand").value,condition:document.getElementById("sellCondition").value,price,img:"products/fallback.svg",emoji:"📦",seller:"Você",rating:"Novo",loc:(document.getElementById("sellState").value||"RJ"),verified:false,age:0,desc:document.getElementById("sellDesc").value||"Anúncio publicado pelo usuário."};
+ myAds.unshift(p);save();document.getElementById("sellTitle").value="";document.getElementById("sellPrice").value="";document.getElementById("sellDesc").value="";toast("Anúncio criado no protótipo!");go("catalog")
+}
+function renderProfile(){document.getElementById("myAds").textContent=myAds.length;document.getElementById("myFavs").textContent=favorites.size}
+
+function toggleSupport(force){
+ const panel=document.getElementById('supportPanel');
+ if(!panel)return;
+ const open=typeof force==='boolean'?force:!panel.classList.contains('open');
+ panel.classList.toggle('open',open);
+ const launcher=document.getElementById('supportLauncher');
+ if(launcher)launcher.setAttribute('aria-expanded',open?'true':'false');
+}
+function supportReply(text){
+ const body=document.querySelector('.support-body');
+ if(!body)return;
+ const bubble=document.createElement('div');bubble.className='support-bubble';bubble.style.marginLeft='auto';bubble.style.background='#eee7ff';bubble.style.color='#4b298d';bubble.textContent=text;body.appendChild(bubble);
+ const answer=document.createElement('div');answer.className='support-bubble';answer.textContent='Recebemos sua solicitação. Nesta versão inicial, o atendimento é demonstrativo. Para falar conosco agora, use o botão “Entre em contato” abaixo.';body.appendChild(answer);body.scrollTop=body.scrollHeight;
+}
+function sendSupport(){
+ const input=document.getElementById('supportInput');if(!input)return;const text=input.value.trim();if(!text)return;supportReply(text);input.value='';
+}
+function demoLogin(){toast("Login demonstrativo realizado.");go("home")}
+renderHome();updateFav();
+</script>
+</body>
+</html>
