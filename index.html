@@ -120,6 +120,34 @@ button,input,select,textarea{font:inherit}button{cursor:pointer}.topbar{backgrou
     border-radius:12px;
   }
 }  
+@media(max-width:650px){
+  .navlinks{
+    display:none;
+  }
+
+  .navsearch{
+    display:flex;
+    order:10;
+    width:100%;
+    max-width:none;
+    min-width:0;
+    flex:0 0 100%;
+  }
+
+  .navright{
+    margin-left:auto;
+    gap:5px;
+  }
+
+  .navright .btn.primary{
+    display:none;
+  }
+
+  .navright .btn{
+    padding:8px 9px;
+    font-size:11px;
+  }
+}
 </style>
 </head>
 <body>
