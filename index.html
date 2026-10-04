@@ -44,6 +44,82 @@ button,input,select,textarea{font:inherit}button{cursor:pointer}.topbar{backgrou
 .location-menu{position:fixed;top:86px;right:max(18px,calc((100% - 1240px)/2));width:430px;max-width:calc(100vw - 24px);background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 18px 55px #0002;z-index:90;display:none;padding:14px}.location-menu.open{display:block}.location-head{display:flex;justify-content:space-between;align-items:center;padding:4px 2px 12px}.location-head button{border:0;background:#f1f0f5;border-radius:8px;width:30px;height:30px;font-size:20px}.location-option{width:100%;display:flex;gap:10px;align-items:center;text-align:left;border:1px solid #ddd8ef;background:#faf8ff;border-radius:12px;padding:11px;margin-bottom:10px}.location-option span{font-size:22px}.location-option strong,.location-option small{display:block}.location-option small{color:var(--muted);margin-top:2px}.location-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;max-height:330px;overflow:auto}.location-grid button{border:1px solid #e4e3ea;background:#fff;border-radius:9px;padding:9px;text-align:left;font-weight:650}.location-grid button:hover{background:#f5f1ff;border-color:#cfc0f4;color:#5b2ac5}.notif-badge{font-size:10px;margin-left:2px}.header-extra{white-space:nowrap}
 @media(max-width:1000px){.header-extra{display:inline-flex}.navright .header-extra{padding:9px 10px}.location-menu{top:78px}}
 @media(max-width:650px){.navright{gap:5px}.header-extra.btn{font-size:0;padding:10px}.header-extra.btn:before{content:'📦';font-size:17px}.navright .header-extra.iconbtn{padding:9px 8px}.navright .btn.primary{padding:10px 11px}.location-menu{left:12px;right:12px;top:76px;width:auto}.location-grid{grid-template-columns:repeat(2,1fr);max-height:300px}}
+
+@media(max-width:650px){
+  .nav{
+    height:auto;
+    min-height:64px;
+    padding:8px 10px;
+    gap:8px;
+    flex-wrap:wrap;
+  }
+
+  .brand{
+    width:110px;
+    height:48px;
+  }
+
+  .brand img{
+    width:100px;
+    height:48px;
+  }
+
+  .navlinks{
+    gap:4px;
+    flex:1;
+    justify-content:flex-end;
+  }
+
+  .navlinks button{
+    font-size:11px;
+    padding:6px 3px;
+  }
+
+  .navsearch{
+    order:10;
+    width:100%;
+    max-width:none;
+    min-width:0;
+    flex:0 0 100%;
+  }
+
+  .navright{
+    gap:4px;
+  }
+
+  .navright .btn{
+    padding:8px 9px;
+    font-size:11px;
+  }
+
+  .hero{
+    min-height:270px;
+    padding:24px 16px;
+  }
+
+  .hero h1{
+    font-size:28px;
+    line-height:1.05;
+  }
+
+  .hero p{
+    font-size:13px;
+  }
+
+  .grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+  }
+
+  .cats{
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+  }
+
+  .product{
+    border-radius:12px;
+  }
+}  
 </style>
 </head>
 <body>
