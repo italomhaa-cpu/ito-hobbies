@@ -148,7 +148,45 @@ button,input,select,textarea{font:inherit}button{cursor:pointer}.topbar{backgrou
     font-size:11px;
   }
 }
-</style>
+@media(max-width:650px){
+  .nav{
+    display:grid;
+    grid-template-columns:110px 1fr;
+    grid-template-rows:auto auto;
+    height:auto;
+    padding:8px 10px 10px;
+    gap:6px 8px;
+  }
+
+  .brand{
+    grid-column:1;
+    grid-row:1;
+    width:110px;
+    height:48px;
+  }
+
+  .navright{
+    grid-column:2;
+    grid-row:1;
+    justify-content:flex-end;
+    margin-left:0;
+  }
+
+  .navsearch{
+    display:flex !important;
+    grid-column:1 / -1;
+    grid-row:2;
+    width:100%;
+    max-width:none;
+    min-width:0;
+    margin:0;
+  }
+
+  .navsearch input{
+    display:block;
+    min-width:0;
+  }
+}</style>
 </head>
 <body>
 <div class="topbar">🛡️ <b>iTo Hobbies</b> — marketplace especializado em colecionáveis novos e usados • segurança em evolução</div>
